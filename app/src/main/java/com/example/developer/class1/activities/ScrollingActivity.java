@@ -32,7 +32,7 @@ public class ScrollingActivity extends AppCompatActivity {
         if(savedInstanceState==null){
             Fragment1 f1 = new Fragment1();
             Bundle args1 = new Bundle();
-            args1.putString("texto","Ño");
+            args1.putString("texto","Ya no voy a ser floja =D");
             f1.setArguments(args1);
             getSupportFragmentManager()
                     .beginTransaction()
