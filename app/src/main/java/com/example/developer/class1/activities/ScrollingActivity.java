@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.developer.class1.R;
+import com.example.developer.class1.fragments.Fragment1;
 
 public class ScrollingActivity extends AppCompatActivity {
 
@@ -27,5 +28,16 @@ public class ScrollingActivity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        if(savedInstanceState==null){
+            Fragment1 f1 = new Fragment1();
+            Bundle args1 = new Bundle();
+            args1.putString("texto","Ño");
+            f1.setArguments(args1);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.main_container, f1, "f1")
+                    .commit();
+        }
     }
 }
